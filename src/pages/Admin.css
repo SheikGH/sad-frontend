@@ -1,0 +1,9 @@
+.table th, .table td {
+  vertical-align: top;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.table td div {
+  margin-bottom: 4px;
+}
