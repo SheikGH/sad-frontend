@@ -50,37 +50,7 @@ If you're using Visual Studio:
 â€¢	Set the API project as Startup Project
 â€¢	Press F5 or click Start Debugging
 ________________________________________
-ðŸ”¹ 8. Common Pages and Actions
-Page	Path	Description
-Register Page	/register	Add new customer (registers user)
-Login Page	/login	Login with JWT token, saved in localStorage
-Customer List Page	/customers	View, Edit, Delete customer records
-Logout	-	Clears token, redirects to Login page
-________________________________________
-ðŸ› ï¸ Troubleshooting Tips
-â€¢	If you get CORS errors, make sure your .NET backend has CORS enabled:
-services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-        });
-});
 
-app.UseCors("AllowAll");
-
-API End points:
-Login => Get: https://localhost:7067/api/Auth/login
-Register => Post: https://localhost:7067/api/Auth/register
-
-Customers:
-Get all customers => Get:https://localhost:7067/api/Customers
-Get a customer => GetByID:https://localhost:7067/api/Customers/2
-Add a customer => PUT:https://localhost:7067/api/Customers/7
-Delete a customer => Delete: https://localhost:7067/api/Customers/7
 
 â€¢	If .env changes are not reflected, restart the server after editing the .env file.
 
